@@ -38,10 +38,6 @@ public class Main {
            System.out.println("validno!");
        }
 
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+       driver.close();
     }
 }

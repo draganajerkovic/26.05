@@ -23,12 +23,10 @@ public class Main {
         searchPolje.sendKeys("iphone 13");
         searchPolje.sendKeys(Keys.ENTER);
         WebElement prazno=driver.findElement(By.xpath("//*[@id=\"bodyTag\"]"));
-        prazno.sendKeys(Keys.ARROW_DOWN);
-        prazno.sendKeys(Keys.ARROW_DOWN);
-        prazno.sendKeys(Keys.ARROW_DOWN);
-        prazno.sendKeys(Keys.ARROW_DOWN);
-        prazno.sendKeys(Keys.ARROW_DOWN);
-        prazno.sendKeys(Keys.ARROW_DOWN);
+        for(int i=0; i<8; i++){
+            prazno.sendKeys(Keys.ARROW_DOWN);
+        }
+
         WebElement prviOglas=driver.findElement(By.xpath("//*[@id=\"adDescription7321776\"]/div/section[2]/div[1]/div[1]/a"));
         prviOglas.click();
         WebElement tekstOglasa=driver.findElement(By.xpath("//*[@id=\'oglas-holder\']/section/div[1]/h1"));
